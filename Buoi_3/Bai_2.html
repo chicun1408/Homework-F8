@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="https://api-gateway.fullstack.edu.vn/action_page.php" method="post">
+    <table>
+        <tr>
+            <td>Username:</td>
+            <td>
+                <label for="username"></label>
+                <input id="username" name="ten nguoi dung">
+            </td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td>
+                <label for="a"></label>
+                <input id="a" name="Mat khau" type="password">
+            </td>
+        </tr>
+        <tr>
+            <td>City of Employment:</td>
+            <td>
+                <label for="b"></label>
+                <input id="b" name="City of employment">
+            </td>
+        </tr>
+        <tr>
+            <td>Web server:</td>
+            <td>
+                <label for="c"></label>
+                <input id="c" name="Server" placeholder="-Chose a server-" list="servers">
+                <datalist id="servers">
+                    <option value="US">
+                    <option value="Asian">
+                </datalist>
+            </td>
+        </tr>
+        <tr>
+            <td>Please specify your role:</td>
+            <td>
+                <label for="d">Admin</label>
+                <input id="d" name="Role" type="radio" value="Admin" ><br>
+                <label for="e">Engineer</label>
+                <input id="e" name="Role" type="radio" value="Engineer"><br>
+                <label for="f">Manager</label>
+                <input id="f" name="Role" type="radio" value="Manager" ><br>
+                <label for="g">Admin</label>
+                <input id="g" name="Role" type="radio" value="Guest">
+            </td>
+        </tr>
+        <tr>
+            <td>The followwing:</td>
+            <td>
+                <label for="h">Mail</label>
+                <input id="h" name="The followwing[]" type="checkbox" value="Mail" ><br>
+                <label for="i">Payrole</label>
+                <input id="i" name="The followwing[]" type="checkbox" value="Payrole"><br>
+                <label for="k">Self-service</label>
+                <input id="k" name="The followwing[]" type="checkbox" value="Self-service" ><br>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button type="submit">Login</button>
+                <button type="reset">Reser</button>
+
+            </td>
+
+        </tr>
+    </table>
+
+</form>
+</body>
