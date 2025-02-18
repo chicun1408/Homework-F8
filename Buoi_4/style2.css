@@ -1,0 +1,18 @@
+.container{
+    background-color: white;
+    color: black;
+    width: 500px;
+    padding: 10px;
+}
+.container p::before{
+    content: "\201C";
+    font-size: 30px;
+    background-color: rgba(25, 24, 24, 0.13);
+    border-radius: 100%;
+}
+.container p::after{
+    content: "\201D";
+    font-size: 30px;
+    background-color: rgba(25, 24, 24, 0.13);
+    border-radius: 100%;
+}
