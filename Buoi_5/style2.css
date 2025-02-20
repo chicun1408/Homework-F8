@@ -1,0 +1,29 @@
+.a {
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.b {
+    display: block;
+    background: orange;
+    color: white;
+    padding: 10px;
+}
+.b::before {
+    content: "+";
+}
+input {
+    display: none;
+}
+input:checked + .b::before {
+    content: "-";
+}
+.noi_dung {
+    display: none;
+    padding: 10px;
+    background: white;
+    border-top: 1px solid #ddd;
+}
+input[type="checkbox"]:checked + .b + .noi_dung {
+    display: block;
+}
