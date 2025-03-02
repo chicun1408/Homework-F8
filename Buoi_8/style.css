@@ -1,0 +1,102 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; }
+img { display: inline-block; }
+nav {
+    background: #333;
+    position: relative;
+}
+/* Định dạng menu chính */
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+nav ul li {
+    position: relative;
+}
+nav ul li a,
+nav ul li label {
+    display: block;
+    padding: 15px 20px;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+nav ul li a:hover,
+nav ul li label:hover {
+    background: #444;
+}
+
+/* Định dạng submenu */
+nav ul li ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #444;
+    flex-direction: column;
+    min-width: 200px;
+    display: none;
+}
+nav ul li ul li {
+    width: 100%;
+    padding-left: 20px; /* Thụt vào 20px */
+}
+
+/* Hiển thị submenu khi checkbox được chọn */
+nav ul li input[type="checkbox"] {
+    display: none;
+}
+nav ul li input[type="checkbox"]:checked ~ ul {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Định dạng submenu cấp 2 (thụt vào sâu hơn) */
+nav ul li ul li ul {
+    position: relative;
+    padding-left: 20px;
+}
+
+/* Định dạng hamburger */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 15px 20px;
+}
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background: #fff;
+    margin-bottom: 4px;
+}
+.hamburger span:last-child {
+    margin-bottom: 0;
+}
+
+/* Hiển thị menu khi thu nhỏ màn hình */
+#menu-toggle {
+    display: none;
+}
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #333;
+    }
+    #menu-toggle:checked ~ ul {
+        display: flex;
+    }
+    .hamburger {
+        display: flex;
+    }
+    nav ul li {
+        width: 100%;
+    }
+    /* Cho submenu hiển thị theo chiều dọc trên mobile */
+    nav ul li ul {
+        position: relative;
+    }
+}
