@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="script.js"></script>
+<!--
+
+                khai báo x
+                var i, j, a
+                    ▼
+                   i=0
+                    ▼
+   ┌──────────────────────────────────────────────────────────────────────┐
+   │   ┌──────► i<x.length                                                │
+   │   │           │                                                      │
+   │   │                                                                  │
+   │   │           │                                                      │
+   │   │           ▼                                                      │
+   │   │          ┌─────────────────────────────────────────────────────┐ │
+   │   │          │j=x.length-1;j>i  ───yes►x[i]>x[j]──yes─► a=x[i]     │ │
+   │   │          │    ▲                       │             x[i]=x[j]  │ │
+   │   └──i++ ◄───┼    │                      no             x[j]=a     │ │
+   │              │    │                       ▼               │        │ │
+   │              │    └─────────────────────j-- ◄─────────────┘        │ │
+   │              │                                                     │ │
+   │              └─────────────────────────────────────────────────────┘ │
+   │                                                                      │
+   │                                                                      │
+   └────────────────┬─────────────────────────────────────────────────────┘
+                    ▼
+                console.log(x)
+
+
+function arrange(x){
+    var i, a, j
+    for(i=0; i<x.length;i++){
+        for(j=x.length-1; j>i; j--){
+            if(x[i]>x[j]){
+                a=x[i]
+                x[i]=x[j]
+                x[j]=a
+            }
+        }
+    }
+    return x
+}
+const value=arrange([1, 2, 3, 5, 4, 22, 14, 13, 14])
+console.log(value)
+
+                                                                            -->
+</body>
+</html>

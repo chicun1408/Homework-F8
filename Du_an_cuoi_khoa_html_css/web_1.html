@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Clone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="logo">YouTube VN</div>
+  <input type="text" placeholder="Tìm kiếm...">
+  <label for="create-dialog" class="btn">Tạo</label>
+</header>
+
+<aside class="sidebar">
+  <ul>
+    <li>Trang chủ</li>
+    <li>Shorts</li>
+    <li>Kênh đăng ký</li>
+    <li>Video đã xem</li>
+    <li>Danh sách phát</li>
+    <li>Video của bạn</li>
+    <li>Xem sau</li>
+    <li>Video đã thích</li>
+  </ul>
+</aside>
+
+<main>
+  <div class="video-grid">
+    <div class="video">Video 1</div>
+    <div class="video">Video 2</div>
+    <div class="video">Video 3</div>
+  </div>
+</main>
+
+<!-- Dialog -->
+<input type="checkbox" id="create-dialog" class="dialog-toggle">
+<div class="dialog">
+  <label for="create-dialog" class="overlay"></label>
+  <div class="dialog-content">
+    <p>Đây là hộp thoại tạo video!</p>
+    <label for="create-dialog" class="close-btn">Đóng</label>
+  </div>
+</div>
+</body>
+</html>
